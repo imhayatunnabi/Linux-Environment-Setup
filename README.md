@@ -8,6 +8,8 @@ sudo apt install wget
 
 ```
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+```
+```
 sudo apt install ./google-chrome-stable_current_amd64.deb
 ```
 
@@ -17,6 +19,8 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 
 ```
 sudo apt-get install snapd
+```
+```
 sudo snap install phpstorm --classic
 ```
 
@@ -24,9 +28,17 @@ sudo snap install phpstorm --classic
 
 ```
 sudo apt-get install wget gpg
+```
+```
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+```
+```
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+```
+```
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+```
+```
 rm -f packages.microsoft.gpg
 ```
 
@@ -34,8 +46,14 @@ rm -f packages.microsoft.gpg
 
 ```
 sudo apt update
+```
+```
 sudo apt install apt-transport-https
+```
+```
 sudo apt update
+```
+```
 sudo apt install code
 ```
 
@@ -43,11 +61,21 @@ sudo apt install code
 
 ```
 sudo apt-get update
+```
+```
 sudo apt-get install git
+```
+```
 git config --global user.name "your github username"
 git config --global user.email "your github attached email address"
+```
+```
 ssh-keygen -t rsa -b 4096 -C "your github attached email address"
+```
+```
 eval "$(ssh-agent -s)"
+```
+```
 ssh-add -K /Users/you/.ssh/id_rsa
 ```
 
@@ -55,8 +83,14 @@ ssh-add -K /Users/you/.ssh/id_rsa
 
 ```
 sudo apt install network-manager
+```
+```
 sudo apt update
+```
+```
 sudo apt upgrade
+```
+```
 sudo lshw -C network
 ```
 
@@ -66,14 +100,31 @@ sudo lshw -C network
 
 ```
 sudo apt install -y php-mbstring php-xml php-fpm php-zip php-common php-fpm php-cli unzip curl nginx
+```
+```
 sudo apt-get install nginx
+```
+```
 sudo apt install software-properties-common
+```
+```
 sudo add-apt-repository ppa:ondrej/php
+```
+```
 sudo apt update && sudo apt upgrade
+```
+```
 sudo apt install php8.0-fpm
+```
+```
 php -v
+```
+```
 systemctl status php8.0-fpm
-Install Curl
+```
+
+## Install Curl
+```
 sudo apt update && sudo apt upgrade
 sudo apt install curl
 sudo apt-cache search libcurl | grep python
@@ -108,15 +159,26 @@ sudo apt install mysql-server
 
 ```
 sudo mysql
+```
+```
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'your database password';
+```
+```
 sudo mysql_secure_installation
+```
+```
 mysql --version
-Install Tableplus
+```
+
+## Install Tableplus
+```
 wget -qO - https://deb.tableplus.com/apt.tableplus.com.gpg.key | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://deb.tableplus.com/debian/20 tableplus main"
 sudo apt update
 sudo apt install tableplus
-Create New Database for show created Databases
+```
+## Create New Database for show created Databases
+```
 mysql -u root -p
 create database databasename;
 show databases;
@@ -144,10 +206,10 @@ sudo apt-get install php-mysql
 composer install --ignore-platform-reqs
 ```
 
-Remove application from ubuntu linux
+## Remove application from ubuntu linux
 
 ```
-sudo apt remove package-name
+sudo apt-get remove package-name
 ```
 
 ## Hide mounted drive form the dock
