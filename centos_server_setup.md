@@ -64,4 +64,15 @@ sudo chown -R username.username /var/www/html/
 sudo dnf install nano
 ```
 
+## install node js and npm in server
 
+```bash
+sudo dnf module install nodejs:latest_version_number
+sudo dnf module list nodejs
+```
+
+### Like node js 18 latest version
+
+```bash
+sudo dnf dnf module install nodejs:18/common
+```
