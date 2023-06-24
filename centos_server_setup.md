@@ -96,6 +96,9 @@ sudo dnf module enable php:remi-8.2 -y
 
 # Install all available PHP extensions
 sudo dnf install -y php-*
+# or 
+sudo dnf install -y php php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mbstring php-curl php-xml php-pear php-bcmath php-json php-openssl php-pdo php-ldap php-pecl-imagick php-pecl-memcache php-pecl-redis php-pecl-apcu php-pecl-mongodb
+
 
 # Restart Apache (if installed) or any other web server
 sudo systemctl restart httpd
