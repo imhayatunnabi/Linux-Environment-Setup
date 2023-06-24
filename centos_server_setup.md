@@ -76,3 +76,31 @@ sudo dnf module list nodejs
 ```bash
 sudo dnf dnf module install nodejs:18/common
 ```
+
+## php with all the necessary extensions installations
+
+```bash
+#!/bin/bash
+
+# Install PHP and required dependencies
+sudo dnf install -y epel-release
+sudo dnf install -y http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+sudo dnf module reset php -y
+sudo dnf module enable php:remi-8.2 -y
+sudo dnf install -y php php-cli php-common
+
+# Enable Remi's PHP repository
+sudo dnf install -y dnf-utils
+sudo dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+sudo dnf module enable php:remi-8.2 -y
+
+# Install all available PHP extensions
+sudo dnf install -y php-*
+
+# Restart Apache (if installed) or any other web server
+sudo systemctl restart httpd
+
+# Verify PHP installation
+php -v
+
+```
