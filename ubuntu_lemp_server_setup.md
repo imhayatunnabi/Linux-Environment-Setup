@@ -4,6 +4,17 @@
 sudo apt install wget
 ```
 
+## Curl
+
+```
+sudo apt update
+sudo apt install -y curl
+```
+
+```
+curl --version
+```
+
 ## Google Chrome install
 
 ```
