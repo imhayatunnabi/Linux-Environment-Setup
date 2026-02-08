@@ -170,6 +170,83 @@ sudo mysql_secure_installation
 mysql --version
 ```
 
+## PostgreSQL
+
+```
+sudo apt update
+sudo apt install -y postgresql postgresql-contrib
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
+```
+
+```
+sudo -u postgres psql
+```
+
+```
+ALTER USER postgres PASSWORD 'your_postgres_password';
+\q
+```
+
+```
+psql --version
+```
+
+## Redis
+
+```
+sudo apt update
+sudo apt install -y redis-server
+sudo systemctl start redis-server
+sudo systemctl enable redis-server
+```
+
+```
+redis-cli ping
+```
+Expected response: `PONG`
+
+```
+redis-server --version
+```
+
+## Python3 and pip
+
+```
+sudo apt update
+sudo apt install -y python3 python3-pip python3-venv
+```
+
+```
+python3 --version
+pip3 --version
+```
+
+## Node.js with NVM
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+```
+
+```
+source ~/.bashrc
+```
+or if using zsh:
+```
+source ~/.zshrc
+```
+
+```
+nvm install --lts
+nvm use --lts
+nvm alias default node
+```
+
+```
+node --version
+npm --version
+```
+
 ## Install Tableplus
 ```
 wget -qO - https://deb.tableplus.com/apt.tableplus.com.gpg.key | sudo apt-key add -
