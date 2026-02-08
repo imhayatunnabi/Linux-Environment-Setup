@@ -390,4 +390,5 @@ gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts true
 https://www.youtube.com/watch?v=PZTLIVQxxEY&t=667s&ab_channel=MuhammadbinYusrat
 ```
 
-## Author: Hayatunnabi Nabil
+## Author: Hayatunnabi Nabil, Mahmud Ahad Abedin Fardin
+
