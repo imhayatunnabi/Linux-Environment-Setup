@@ -268,6 +268,19 @@ node --version
 npm --version
 ```
 
+## Yarn
+
+Requires Node.js (e.g. from NVM above). Corepack is included with Node 16.10+.
+
+```
+corepack enable
+corepack prepare yarn@stable --activate
+```
+
+```
+yarn --version
+```
+
 ## Install Tableplus
 ```
 wget -qO - https://deb.tableplus.com/apt.tableplus.com.gpg.key | sudo apt-key add -
