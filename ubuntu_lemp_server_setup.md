@@ -254,6 +254,53 @@ sudo add-apt-repository "deb [arch=amd64] https://deb.tableplus.com/debian/20 ta
 sudo apt update
 sudo apt install tableplus
 ```
+
+## Cursor IDE
+
+```
+sudo apt update
+sudo apt install -y libfuse2
+```
+
+```
+wget "https://downloader.cursor.sh/linux/appImage/x64" -O cursor.AppImage
+chmod +x cursor.AppImage
+./cursor.AppImage --no-sandbox
+```
+
+Optional: add to `~/.bashrc` or `~/.zshrc`:
+```
+alias cursor='~/cursor.AppImage --no-sandbox'
+```
+
+## pgAdmin
+
+```
+curl -fsS https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /usr/share/keyrings/packages-pgadmin-org.gpg
+```
+
+```
+sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/packages-pgadmin-org.gpg] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
+```
+
+```
+sudo apt update
+sudo apt install -y pgadmin4-desktop
+```
+
+## DBeaver Studio
+
+```
+sudo apt update
+sudo apt install -y snapd
+sudo snap install dbeaver-ce
+```
+
+For DBeaver Ultimate/Team, download the .deb from https://dbeaver.com/download and install:
+```
+sudo dpkg -i dbeaver-*.deb
+```
+
 ## Create New Database for show created Databases
 ```
 mysql -u root -p
