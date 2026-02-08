@@ -13,6 +13,33 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 ```
 
+## Brave browser
+
+```
+sudo apt install -y apt-transport-https curl
+```
+
+```
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/brave-browser-archive-keyring.gpg
+```
+
+```
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+```
+
+```
+sudo apt update
+sudo apt install -y brave-browser
+```
+
+## Discord
+
+```
+sudo apt update
+sudo apt install -y snapd
+sudo snap install discord
+```
+
 ## Install php storm:
 
 ## Install snap beforehand:
